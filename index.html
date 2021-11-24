@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3</title>
+    <link rel="stylesheet" href="style.css">
+    <script scr = "script.js" defer></script>
+</head>
+<body>
+    <div class="flexbox">
+        <div class="item" id="first">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/TVE_La1_-_Logo_2008.png" alt="" width="15%" id="Img1">
+            <div class="buttons">            
+                <button id="Down1">Ниже</button>
+                <input class ="size" type="number" id="Width1">
+                <input type="button" value="ok" name="SetWidth1" id="SetWidth1">
+                <input class ="size" type="number" id="Height1">
+                <button id="SetHeight1">Ok</button>
+            </div>
+        </div>
+        <div class="item" id="second">
+            <img src="https://static7.depositphotos.com/1020618/769/i/600/depositphotos_7698110-stock-photo-film-countdown-at-no-2.jpg" alt="" width="15%" id="Img2">
+            <div class="buttons">            
+                <button id="Up2">Выше</button>
+                <button id="Down2">Ниже</button>
+                <input class ="size" type="number" id="Width2">
+                <button id="SetWidth2">Ok</button>
+                <input class ="size" type="number" id="Height2">
+                <button id="SetHeight2">Ok</button>
+            </div>
+        </div>
+        <div class="item" id="third">
+            <img src="https://static8.depositphotos.com/1010782/858/i/600/depositphotos_8581472-stock-photo-fire-numbers-3.jpg" alt="" width="15%" id="Img3">
+            <div class="buttons">            
+                <button id="Up3">Выше</button>
+                <button id="Down3">Ниже</button>
+                <input class ="size" type="number" id="Width3">
+                <button id="SetWidth3">Ok</button>
+                <input class ="size" type="number" id="Height3">
+                <button id="SetHeight3">Ok</button>
+            </div>
+        </div>
+        <div class="item" id="fourth">
+            <img src="https://static5.depositphotos.com/1000991/474/i/600/depositphotos_4742808-stock-photo-fire-figure.jpg" alt="" width="15%" id="Img4">
+            <div class="buttons">            
+                <button id="Up4">Выше</button>
+                <button id="Down4">Ниже</button>
+                <input class ="size" type="number" id="Width4">
+                <button id="SetWidth4">Ok</button>
+                <input class ="size" type="number" id="Height4">
+                <button id="SetHeight4">Ok</button>
+            </div>
+        </div>
+        <div class="item" id="fifth">
+            <img src="https://static9.depositphotos.com/1007989/1112/i/600/depositphotos_11129511-stock-photo-number-5.jpg" alt="" width="15%" id="Img5">
+            <div class="buttons">            
+                <button id="Up5">Выше</button>
+                <input class ="size" type="number" id="Width5">
+                <button id="SetWidth5">Ok</button>
+                <input class ="size" type="number" id="Height5">
+                <button id="SetHeight5">Ok</button>
+            </div>
+        </div>
+    </div>
+    <button id="button10">Ok</button>
+    <script>
+        SetWidth1.onclick = function() {
+            let textVal = Width1.value * 1;
+            Img1.style.width = textVal + 'px';
+        };
+        SetWidth2.onclick = function() {
+            let textVal = Width2.value * 1;
+            Img2.style.width = textVal + 'px';
+        };
+            SetWidth3.onclick = function() {
+            let textVal = Width3.value * 1;
+            Img3.style.width = textVal + 'px';
+        };
+        SetWidth4.onclick = function() {
+            let textVal = Width4.value * 1;
+            Img4.style.width = textVal + 'px';
+        };
+        SetWidth5.onclick = function() {
+            let textVal = Width5.value * 1;
+            Img5.style.width = textVal + 'px';
+        };
+        SetHeight1.onclick = function() {
+            let textVal = Height1.value * 1;
+            Img1.style.height = textVal + 'px';
+        };
+        SetHeight2.onclick = function() {
+            let textVal = Height2.value * 1;
+            Img2.style.height = textVal + 'px';
+        };
+        SetHeight3.onclick = function() {
+            let textVal = Height3.value * 1;
+            Img3.style.height = textVal + 'px';
+        };
+        SetHeight4.onclick = function() {
+            let textVal = Height4.value * 1;
+            Img4.style.height = textVal + 'px';
+        };
+        SetHeight5.onclick = function() {
+            let textVal = Height5.value * 1;
+            Img5.style.height = textVal + 'px';
+        };
+        Down1.onclick = function() {
+            var tmp = Img1.src;
+            Img1.src = Img2.src;
+            Img2.src = tmp;
+        }
+        Down2.onclick = function() {
+            var tmp = Img2.src;
+            Img2.src = Img3.src;
+            Img3.src = tmp;
+        }
+        Down3.onclick = function() {
+            var tmp = Img3.src;
+            Img3.src = Img4.src;
+            Img4.src = tmp;
+        }
+        Down4.onclick = function() {
+            var tmp = Img4.src;
+            Img4.src = Img5.src;
+            Img5.src = tmp;
+        }
+        Up2.onclick = function() {
+            var tmp = Img2.src;
+            Img2.src = Img1.src;
+            Img1.src = tmp;
+        }
+        Up3.onclick = function() {
+            var tmp = Img3.src;
+            Img3.src = Img2.src;
+            Img2.src = tmp;
+        }
+        Up4.onclick = function() {
+            var tmp = Img4.src;
+            Img4.src = Img3.src;
+            Img3.src = tmp;
+        }
+        Up5.onclick = function() {
+            var tmp = Img5.src;
+            Img5.src = Img4.src;
+            Img4.src = tmp;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.flexbox
+{
+    flex-direction: column;
+    display: flex;
+    justify-content:space-evenly;
+}
+.size
+{
+    width: 40px;
+}
